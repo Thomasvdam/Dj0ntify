@@ -1,0 +1,55 @@
+@import 'nib'
+
+/*
+ * Grab a custom font from Google
+ */
+@import url('http://fonts.googleapis.com/css?family=Quicksand')
+
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+/*
+ * Store the main colours as variables
+ */
+red = #fa5b4d
+green = #00FF00
+background-colour = #faf9f0
+
+body
+  font-family 'Courier New'
+  background-color background-colour
+  color #444
+
+header
+  font-family 'Quicksand'
+  padding 50px 10px
+  color #fff
+  font-size 25px
+  text-align center
+
+  background-color red
+  border-bottom 1px solid darken(red, 30%)
+  text-shadow 0px -1px 0px darken(red, 30%)
+
+.container
+  width 500px
+  margin 50px auto
+
+.inputContainer
+  display block
+  width 500
+  padding-bottom 30px
+
+  .label
+    display block
+
+  textarea
+    display block
+    float bottom
+    margin-bottom 5px
+
+#Dj0nted
+  word-wrap break-word
+  width 500px
