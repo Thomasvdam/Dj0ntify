@@ -1,8 +1,11 @@
 $(document).ready(function() {
+
+  //$("#button").attr("disabled", "disabled");
+
   $("#Dj0ntify").submit(function() {
 
     var text = $("textarea[name=text]").val();
-    var character;
+    var djentText = "";
     var beat = 0;
     var line = 0;
 
@@ -13,10 +16,10 @@ $(document).ready(function() {
       if (beat == 4) {
 
         if (line == 3) {
-          $("#Dj0nted").append('<br/>');
+          djentText += '<br/>';
           line = 0;
         } else {
-          $("#Dj0nted").append(' | ');
+          djentText += ' | ';
           line ++;
         };
         beat = 0;
@@ -25,13 +28,14 @@ $(document).ready(function() {
       if (text[i] == ' ') {
         continue;
       } else if (reVowels.test(text[i])) {
-        $("#Dj0nted").append('0');
+        djentText += '0';
         beat++;
       } else {
-        $("#Dj0nted").append('-');
+        djentText += '-';
         beat++;
       };
     };
+    $("#Dj0nted").html(djentText);
     return false;
   });
 });
