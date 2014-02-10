@@ -24,7 +24,8 @@ app.use(stylus.middleware(
     compile: compile
   }
 ));
-app.use(express.static(__dirname + '/public'));
+process.env.PWD = process.cwd()
+app.use(express.static(process.env.PWD + '/public'));
 
 app.use(express.bodyParser());
 app.use(express.cookieParser());
