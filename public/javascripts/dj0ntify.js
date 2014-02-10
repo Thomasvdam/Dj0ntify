@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-  //$("#button").attr("disabled", "disabled");
-
   $("#Dj0ntify").submit(function() {
 
     var text = $("textarea[name=text]").val();
